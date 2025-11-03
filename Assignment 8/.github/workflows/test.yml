@@ -34,7 +34,7 @@ jobs:
      - name: Run tests
        run: |
          source venv/bin/activate
-         pytest tests/unit/ --cov=src --junitxml=test-results/junit.xml
+         pytest tests/unit/ --cov=app --junitxml=test-results/junit.xml
          pytest tests/integration/
          pytest tests/e2e/
 
@@ -75,8 +75,8 @@ jobs:
        with:
          push: true
          tags: |
-           kaw393939/601_module8:latest
-           kaw393939/601_module8:${{ github.sha }}
+           jelanimorgan/assignment8:latest
+           jelanimorgan/assignment8:${{ github.sha }}
          platforms: linux/amd64,linux/arm64
-         cache-from: type=registry,ref=kaw393939/601_module8:cache
+         cache-from: type=registry,ref=jelanimorgan/assignment8:cache
          cache-to: type=inline,mode=max
