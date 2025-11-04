@@ -1,4 +1,4 @@
-run-name: name: Docker Image CI
+name: name: Docker Image CI
 
 on:
   push:
